@@ -20,7 +20,7 @@ export const getAllArticlesHandler = async (request: Request, h: ResponseToolkit
   try {
     // Extract pagination parameters from query
     const page = Number.parseInt(request.query.page as string) || 1
-    const limit = Number.parseInt(request.query.limit as string) || 10
+    const limit = Number.parseInt(request.query.limit as string) || 100
 
     // Calculate offset
     const offset = (page - 1) * limit
